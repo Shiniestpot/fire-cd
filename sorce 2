@@ -54,7 +54,7 @@ end
 local function bringMoneyParts()
     while Enabled2 do
         for _, part in ipairs(workspace:GetDescendants()) do
-            if part:IsA("BasePart") and part.Name == "BringPart Money" then
+            if part:IsA("BasePart") and part.Name == "money" then
                 part.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame
             end
         end
