@@ -28,7 +28,7 @@ local function createButton(parent, position, text)
     button.Text = text
     button.TextScaled = true
     button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-    button.TextColor3 = Color3.fromRGB(255, 50, 50)
+    button.TextColor3 = Color3.fromRGB(255, 255, 255)
     button.Font = Enum.Font.GothamBold
     return button
 end
