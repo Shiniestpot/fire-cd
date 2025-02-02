@@ -16,7 +16,7 @@ ScreenGui.Parent = game.CoreGui
 MainFrame.Parent = ScreenGui
 MainFrame.Size = UDim2.new(0, 220, 0, 130)
 MainFrame.Position = UDim2.new(1, -230, 0, 10) -- Top-right corner
-MainFrame.BackgroundTransparency = 0.5 -- Make it invisible
+MainFrame.BackgroundTransparency = 1 -- Make it invisible
 MainFrame.Active = true
 MainFrame.Draggable = true
 
@@ -36,7 +36,7 @@ end
 ToggleButton1 = createButton(MainFrame, 0, "ClickDetectors: OFF")
 ToggleButton2 = createButton(MainFrame, 45, "BringPart Money: OFF")
 RemoveButton = createButton(MainFrame, 90, "❌ Remove GUI")
-RemoveButton.BackgroundColor3 = Color3.fromRGB(200, 50, 50)
+RemoveButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 
 -- Function to fire all ClickDetectors
 local function fireClickDetectors()
