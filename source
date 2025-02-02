@@ -17,7 +17,7 @@ local Enabled2 = false
 ScreenGui.Parent = game.CoreGui
 
 MainFrame.Parent = ScreenGui
-MainFrame.Size = UDim2.new(0, 250, 0, 120)
+MainFrame.Size = UDim2.new(0, 150, 0, 120)
 MainFrame.Position = UDim2.new(0, 10, 1, -200) -- Bottom left
 MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 MainFrame.Active = true
@@ -31,7 +31,7 @@ UIStroke.Thickness = 2
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
 
 TitleLabel.Parent = MainFrame
-TitleLabel.Size = UDim2.new(1, 0, 0, 10)
+TitleLabel.Size = UDim2.new(1, 0, 0, 20)
 TitleLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TitleLabel.Text = "skibidi hub v1.3"
@@ -39,16 +39,16 @@ TitleLabel.Font = Enum.Font.GothamBold
 TitleLabel.TextSize = 25
 
 ToggleButton1.Parent = MainFrame
-ToggleButton1.Size = UDim2.new(1, -10, 0, 35)
-ToggleButton1.Position = UDim2.new(0, 20, 0, 35)
+ToggleButton1.Size = UDim2.new(1, -5, 0, 35)
+ToggleButton1.Position = UDim2.new(0, 10, 0, 35)
 ToggleButton1.Text = "ClickDetectors: OFF"
 ToggleButton1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 ToggleButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton1.Font = Enum.Font.Gotham
 
 ToggleButton2.Parent = MainFrame
-ToggleButton2.Size = UDim2.new(1, -10, 0, 35)
-ToggleButton2.Position = UDim2.new(0, 20, 0, 75)
+ToggleButton2.Size = UDim2.new(1, -5, 0, 35)
+ToggleButton2.Position = UDim2.new(0, 10, 0, 75)
 ToggleButton2.Text = "BringPart Money: OFF"
 ToggleButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 ToggleButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
