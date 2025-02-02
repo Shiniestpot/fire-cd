@@ -36,10 +36,10 @@ TitleLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TitleLabel.Text = "skibidi hub v1.3"
 TitleLabel.Font = Enum.Font.GothamBold
-TitleLabel.TextSize = 25
+TitleLabel.TextSize = 17
 
 ToggleButton1.Parent = MainFrame
-ToggleButton1.Size = UDim2.new(1, -5, 0, 35)
+ToggleButton1.Size = UDim2.new(1, -5, 0, 10)
 ToggleButton1.Position = UDim2.new(0, 10, 0, 35)
 ToggleButton1.Text = "ClickDetectors: OFF"
 ToggleButton1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
@@ -47,7 +47,7 @@ ToggleButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
 ToggleButton1.Font = Enum.Font.Gotham
 
 ToggleButton2.Parent = MainFrame
-ToggleButton2.Size = UDim2.new(1, -5, 0, 35)
+ToggleButton2.Size = UDim2.new(1, -5, 0, 10)
 ToggleButton2.Position = UDim2.new(0, 10, 0, 75)
 ToggleButton2.Text = "BringPart Money: OFF"
 ToggleButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
