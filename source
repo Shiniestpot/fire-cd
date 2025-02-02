@@ -34,7 +34,7 @@ TitleLabel.Parent = MainFrame
 TitleLabel.Size = UDim2.new(0.5, 0, 0, 20)
 TitleLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-TitleLabel.Text = "skibidi hub v1.3"
+TitleLabel.Text = "skibidi hub v0"
 TitleLabel.Font = Enum.Font.GothamBold
 TitleLabel.TextSize = 17
 
