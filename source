@@ -31,7 +31,7 @@ UIStroke.Thickness = 2
 UIStroke.Color = Color3.fromRGB(255, 255, 255)
 
 TitleLabel.Parent = MainFrame
-TitleLabel.Size = UDim2.new(0.5, -5, 0, 20)
+TitleLabel.Size = UDim2.new(0.5, 0, 0, 20)
 TitleLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TitleLabel.Text = "skibidi hub v1.3"
@@ -39,7 +39,7 @@ TitleLabel.Font = Enum.Font.GothamBold
 TitleLabel.TextSize = 17
 
 ToggleButton1.Parent = MainFrame
-ToggleButton1.Size = UDim2.new(0.5, -5, 0, 20)
+ToggleButton1.Size = UDim2.new(0.5, 0, 0, 20)
 ToggleButton1.Position = UDim2.new(0, 10, 0, 35)
 ToggleButton1.Text = "ClickDetectors: OFF"
 ToggleButton1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
