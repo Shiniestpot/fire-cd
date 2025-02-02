@@ -1,0 +1,101 @@
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+local UIS = game:GetService("UserInputService")
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local TitleLabel = Instance.new("TextLabel")
+local ToggleButton1 = Instance.new("TextButton")
+local ToggleButton2 = Instance.new("TextButton")
+local UIStroke = Instance.new("UIStroke")
+local UICorner = Instance.new("UICorner")
+
+local Enabled1 = false
+local Enabled2 = false
+
+-- GUI Setup
+ScreenGui.Parent = game.CoreGui
+
+MainFrame.Parent = ScreenGui
+MainFrame.Size = UDim2.new(0, 220, 0, 120)
+MainFrame.Position = UDim2.new(0, 10, 1, -200) -- Bottom left
+MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+MainFrame.Active = true
+MainFrame.Draggable = true
+
+UICorner.Parent = MainFrame
+UICorner.CornerRadius = UDim.new(0, 8)
+
+UIStroke.Parent = MainFrame
+UIStroke.Thickness = 2
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+
+TitleLabel.Parent = MainFrame
+TitleLabel.Size = UDim2.new(1, 0, 0, 30)
+TitleLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.Text = "Utilities"
+TitleLabel.Font = Enum.Font.GothamBold
+TitleLabel.TextSize = 16
+
+ToggleButton1.Parent = MainFrame
+ToggleButton1.Size = UDim2.new(1, -20, 0, 35)
+ToggleButton1.Position = UDim2.new(0, 10, 0, 35)
+ToggleButton1.Text = "ClickDetectors: OFF"
+ToggleButton1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ToggleButton1.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton1.Font = Enum.Font.Gotham
+
+ToggleButton2.Parent = MainFrame
+ToggleButton2.Size = UDim2.new(1, -20, 0, 35)
+ToggleButton2.Position = UDim2.new(0, 10, 0, 75)
+ToggleButton2.Text = "BringPart Money: OFF"
+ToggleButton2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+ToggleButton2.TextColor3 = Color3.fromRGB(255, 255, 255)
+ToggleButton2.Font = Enum.Font.Gotham
+
+-- Function to fire all ClickDetectors
+local function fireClickDetectors()
+    while Enabled1 do
+        for _, detector in ipairs(workspace:GetDescendants()) do
+            if detector:IsA("ClickDetector") then
+                fireclickdetector(detector)
+            end
+        end
+        task.wait(0.1) -- Prevents excessive firing
+    end
+end
+
+-- Function to bring "BringPart Money" parts to the player
+local function bringMoneyParts()
+    while Enabled2 do
+        for _, part in ipairs(workspace:GetDescendants()) do
+            if part:IsA("BasePart") and part.Name == "money" then
+                part.CFrame = LocalPlayer.Character.HumanoidRootPart.CFrame
+            end
+        end
+        task.wait(0.1) -- Prevents excessive looping
+    end
+end
+
+-- Toggle ClickDetector Function
+ToggleButton1.MouseButton1Click:Connect(function()
+    Enabled1 = not Enabled1
+    ToggleButton1.Text = "ClickDetectors: " .. (Enabled1 and "ON" or "OFF")
+    ToggleButton1.BackgroundColor3 = Enabled1 and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(255, 0, 0)
+
+    if Enabled1 then
+        task.spawn(fireClickDetectors)
+    end
+end)
+
+-- Toggle BringPart Money Function
+ToggleButton2.MouseButton1Click:Connect(function()
+    Enabled2 = not Enabled2
+    ToggleButton2.Text = "BringPart Money: " .. (Enabled2 and "ON" or "OFF")
+    ToggleButton2.BackgroundColor3 = Enabled2 and Color3.fromRGB(0, 200, 0) or Color3.fromRGB(255, 0, 0)
+
+    if Enabled2 then
+        task.spawn(bringMoneyParts)
+    end
+end)
