@@ -36,7 +36,7 @@ end
 ToggleButton1 = createButton(MainFrame, 0, "ClickDetectors: OFF")
 ToggleButton2 = createButton(MainFrame, 45, "BringPart Money: OFF")
 RemoveButton = createButton(MainFrame, 90, "❌ Remove GUI")
-RemoveButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+RemoveButton.BackgroundColor3 = Color3.fromRGB(255, 20, 20)
 
 -- Function to fire all ClickDetectors
 local function fireClickDetectors()
