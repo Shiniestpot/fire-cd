@@ -17,7 +17,7 @@ local Enabled2 = false
 ScreenGui.Parent = game.CoreGui
 
 MainFrame.Parent = ScreenGui
-MainFrame.Size = UDim2.new(0, 220, 0, 120)
+MainFrame.Size = UDim2.new(0, 300, 0, 120)
 MainFrame.Position = UDim2.new(0, 10, 1, -200) -- Bottom left
 MainFrame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
 MainFrame.Active = true
